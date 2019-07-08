@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "",
+    "start": "node prod",
+    "prod": "nodemon src/index.js",
     "client": "npm start --prefix client",
     "server": "env-cmd ./config/dev.env nodemon src/index.js",
     "dev": "concurrently \"npm run client\" \"npm run server\"",
-    "test": "env-cmd ./config/test.env jest --watch --runInBand"
+    "test": "env-cmd ./config/test.env jest --watch --runInBand",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "jest": {
     "testEnvironment": "node"

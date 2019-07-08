@@ -8,8 +8,8 @@ import PropTypes from "prop-types";
 import NavigationLinks from "./NavigationLinks";
 
 // Logo image path
-import Logo from "../../../assets/img/logo.png";
-import SmallLogo from "../../../assets/img/small-logo.png";
+// import Logo from "../../../assets/img/logo.png";
+// import SmallLogo from "../../../assets/img/small-logo.png";
 
 // Redux
 import { connect } from "react-redux";
@@ -41,10 +41,11 @@ const Navigation = ({
           to="/dashboard"
           className={`navbar-brand ${sideMenu ? "navbar-logo" : ""}`}
         >
+          <h4>Logo</h4>
           {/* Large logo */}
-          <Image src={Logo} alt="Logo" className="large-logo" />
+          {/* <Image src={Logo} alt="Logo" className="large-logo" /> */}
           {/* Small logo */}
-          <Image src={SmallLogo} alt="Small Logo" className="small-logo" />
+          {/* <Image src={SmallLogo} alt="Small Logo" className="small-logo" />*/}
         </Link>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

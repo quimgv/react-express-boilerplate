@@ -1,11 +1,14 @@
 {
   "name": "react-express-boilerplate",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.x",
+    "npm": "6.x"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node prod",
-    "prod": "nodemon src/index.js",
+    "start": "node src/index.js",
     "client": "npm start --prefix client",
     "server": "env-cmd ./config/dev.env nodemon src/index.js",
     "dev": "concurrently \"npm run client\" \"npm run server\"",
